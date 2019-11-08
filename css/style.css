@@ -6,11 +6,12 @@
 html,body{
     width: 100%;
     height: 100%;
-    font-family: 'Merriweather', serif, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     font-size: 1rem;
     margin: 0;
     line-height: 1.5;
     letter-spacing: 0;
+    
     color: white;
     overflow-x:hidden;
 }
@@ -125,7 +126,7 @@ a:hover{
   background-color: black;
   height: 100vh;
   min-height: 25rem;
- 
+ margin: auto;
   width: 100%;
   overflow: hidden;
     
@@ -137,28 +138,17 @@ a:hover{
 .t-vid{
     position: absolute;
     overflow: hidden;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left:0;
     min-width: 100%;
     min-height:100%;
     width: 100vw;
     height: 120vh;
     z-index: 0;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-   
+    
 }
 
-.heroverlay{
-    
-    
-     text-align: center;
-     position: relative;
-     z-index: 2;
-     top: 20%;
-}
+
 
 .overlay {
     position: absolute;
@@ -170,13 +160,24 @@ a:hover{
     opacity: 0.25;
     z-index: 1;
   }
-
-.site-title{
+  .heroverlay{
     
-    margin: 1.2em auto 0;
+    top: 30%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    
+    
+}
+  .trans-all-out-10{
+    
+    width: 20vw;
+    height: auto;
+    margin: 1.2em auto 1em;
     /* left:50%; */
     /* margin-bottom: 50px; */
 }
+
 .heroverlay p {
     
     font-size: 1.35em;
@@ -187,7 +188,7 @@ a:hover{
      
      
     margin: auto;
-    margin: 1.2em auto 2em;
+    margin: 1.2em auto 3em;
     
 }
 .cta{
@@ -210,22 +211,69 @@ a:hover{
     margin: 0.6em auto;
     z-index: 1000;
     opacity: 0.8;
-   
+  
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     width: 100%;
     outline: none;
-    /* transform: translateX(-50%); */
+    transform: translateX(-1%);
 }
 
 .tiles{
-    background-color: rgb(71, 10, 10);
-    color: #5b5456;
-    min-height: 50vh;
-    display: flex;
    
+    color: #5b5456;
+   
+  
+   
+}
+.tile{
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+    box-sizing: border-box;
+    
+}
+.detail-1 h3 {
+    font-size: 1.8em;
+    margin: 0.3em 0;
 }
 .tile_lake{
     background-image: url(/assets/lakefront.jpg) no-repeat center;
   
+}
+.header_img{
+    width: 100%;
+    height: 20%;
+}
+@media(min-aspect-ratio: 16/9){
+    .t-vid{
+        width: 100%;
+        height: auto;
+    }
+    .trans-all-out-10{
+        width: 30vh;
+        margin: 1.2em auto 0;
+        /* left:50%; */
+        /* margin-bottom: 50px; */
+    }
+   
+}
+@media(max-width: 800px){
+    
+    .trans-all-out-10{
+        width: 30vh;
+        height: auto;
+    }
+    
+}
+
+@media(max-width: 500px){
+    .t-vid{
+        display: none;
+
+    }
+    .down-arrow{
+        transform: translateX(-3%);
+    }
+    
 }
