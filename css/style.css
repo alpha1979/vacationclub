@@ -121,74 +121,60 @@ a:hover{
 
 /* video background section */
 .hero-section{
-    display: flex;
-    height: 100vh;
-    /* align-items: center; */
-    flex-direction: column;
-   
-    position: relative;
-    
-    text-align: center;
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+ 
+  width: 100%;
+  overflow: hidden;
     
 }
 
-/* video containter */
-.hero-top{
-   
-    /* display: flex; */
-    align-items: center;
-    color: #ffffff;
-    
-   
 
-}
-.t-vid-container{
-    
-    position: absolute;
-    overflow: hidden;
-    left: 0;
-    top: 0;
-    width: 100%;
-    
-}
 
 
 .t-vid{
-   height: 50%;
-   width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height:100%;
+    width: 100vw;
+    height: 120vh;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
    
 }
-#video-background{
-    z-index: 1;
+
+.heroverlay{
+    
+    
+     text-align: center;
+     position: relative;
+     z-index: 2;
+     top: 20%;
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    /* background: #4e8fcc; */
-    background:#d8143b;
-    opacity:  0.05;
-}
-.heroverlay{
-    /* padding-left: 1rem;
-    padding-right: 1rem;
-     
-     
-    margin: auto;
-    z-index: 1000; */
-    position: absolute;
+    height: 100%;
     width: 100%;
-    top: 45%;
-    transform: translateY(-50%);
-    text-align: center;
-   
+    background-color: black;
+    opacity: 0.25;
     z-index: 1;
-    
-}
+  }
 
 .site-title{
-    margin: 1.2em auto 1em;
-    z-index: 1000;
+    
+    margin: 1.2em auto 0;
+    /* left:50%; */
     /* margin-bottom: 50px; */
 }
 .heroverlay p {
@@ -201,7 +187,7 @@ a:hover{
      
      
     margin: auto;
-    margin: 1.2em auto 1.3em;
+    margin: 1.2em auto 2em;
     
 }
 .cta{
@@ -217,18 +203,19 @@ a:hover{
     
     border: 1px solid #fff;
 }
-a.down-arrow {
+.down-arrow {
     background: url(/assets/arrow.png) no-repeat center center;
-    background-size: 50px auto;
+    background-size: 50px 20px;
     height: 150px;
+    margin: 0.6em auto;
     z-index: 1000;
     opacity: 0.8;
-    margin: 0.6em auto;
+   
     position: absolute;
     bottom: 0;
     width: 100%;
     outline: none;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
 }
 
 .tiles{
@@ -236,5 +223,9 @@ a.down-arrow {
     color: #5b5456;
     min-height: 50vh;
     display: flex;
-    position: relative;
+   
+}
+.tile_lake{
+    background-image: url(/assets/lakefront.jpg) no-repeat center;
+  
 }
