@@ -258,6 +258,10 @@ a:hover{
     color: black;
     text-align: center;
 }
+.btn-own{
+    border-radius: 0;
+    
+}
 /* need to sort out later */
 #enquire{
     color: #5b5456;
