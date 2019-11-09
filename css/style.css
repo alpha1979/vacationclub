@@ -36,8 +36,10 @@ a:hover{
     z-index: 100;
     transform: translateZ(0);
    
-    /* display: flex;
-    flex-wrap: wrap; */
+   
+   
+    /* display: flex; */
+    /* flex-wrap: wrap; */
 }
 
 .btn-toggle-nav{
@@ -49,26 +51,73 @@ a:hover{
 
 
 #nav-reveal{
-   display: block;
+    
+    /* display: flex; 
+    flex-direction:column;
+    justify-content: center;
+    align-items: center; */
+   
     height:84px;
     top: 0;
     right: 0;
-    padding: 20px 60px 0 30px;
-    /* display: block; */
+    padding: 20px;
+    display: inline-block;
     position: absolute;
-    z-index: 1200;
-   
+    
     background-color: rgba(51, 42, 45, 0.66);
 }
-.nav div{
-    height: 6px;
-    background-color: white;
-    margin: 9px 0;
-    border-radius:100px;
+.main-burger > div{
+    
+     height: 6px;
+     background-color: white;
+     margin: 8px auto;
+     border-radius:100px;
+     transition: 0.3s;
+     /* text-align: center; */
+ }
+
+
+.one{
+   
+    width: 50px;
+}
+.two{
+    
+    width: 40px;
+}
+.three{
+    width: 30px;
+}
+
+.main-burger:hover div{
+    width: 50px;
+    /* padding: 0 30px 0 30px; */
     
 }
+
+/* the change bar to cross */
+.change{
+    
+    width: 176px;
+    
+}
+.change .one {
+    width: 50px;
+    -webkit-transform: rotate(-45deg) translate(-10px, 6px);
+    transform: rotate(-45deg) translate(-10px, 6px);
+  }
+  
+  .change .two {opacity: 0;
+width: 50px;}
+  
+  .change .three {
+      width: 50px;
+    -webkit-transform: rotate(45deg) translate(-10px, -11px);
+    transform: rotate(45deg) translate(-10px, -11px);
+  }
+  /* End of chagne bar */
 #nav-main{
-    visibility: hidden;
+    display: block;
     top: 84px;
     right: 0;
     position: absolute;
@@ -103,30 +152,18 @@ a:hover{
     text-transform: capitalize;
     text-decoration: none;
 }
-.nav{
+/* .nav{
    
     width: 40px;
     height: 50%;
     display: block;
-    
-    
+ 
 
-}
-.one{
-    
-    width: 40px;
-}
-.two{
-    
-    width: 40px;
-}
-.three{
-    width: 40px;
+} */
+.hidden{
+    visibility: hidden;
 }
 
-.nav:hover div{
-    width: 30px;
-}
 
 /* video background section */
 .hero-section{
@@ -151,7 +188,7 @@ a:hover{
     min-width: 100%;
     min-height:100%;
     width: 100vw;
-    height: 120vh;
+    height: auto;
     z-index: 0;
     
 }
@@ -170,7 +207,7 @@ a:hover{
   }
   .heroverlay{
     
-    top: 30%;
+    top: 20%;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -179,7 +216,7 @@ a:hover{
 }
   .trans-all-out-10{
     
-    width: 20vw;
+    width: 30vw;
     height: auto;
     margin: 1.2em auto 0;
     /* left:50%; */
@@ -282,38 +319,42 @@ a:hover{
     background-color: #5b5456;
 }
 /* upto here  */
-@media(min-aspect-ratio: 16/9){
+/* @media (min-aspect-ratio: 16/9){
     .t-vid{
-        width: 100%;
+        width: 100vw;
         height: auto;
         
     }
     
    
    
-}
-@media(max-width: 800px){
+} */
+@media screen and (max-width: 800px){
     
+    .t-vid{
+        overflow: auto;
+        
+    }
     .trans-all-out-10{
-        width: 30vh;
+        width: 60vw;
         height: auto;
     }
     .header_img{
-        width: 200vw;
-        height:auto;
+        width: 100vw;
+        height:40vh;
     }
     
 }
 
-@media(max-width: 500px){
+@media screen and (max-width: 500px){
     .t-vid{
         display: none;
         
 
     }
-    .down-arrow{
-        transform: translateX(-3%);
-    }
+    /* .down-arrow{
+        transform: translateY(-44%);
+    } */
     
     
 }
