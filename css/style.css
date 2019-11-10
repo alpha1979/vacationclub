@@ -64,6 +64,7 @@ a:hover{
     display: inline-block;
     position: absolute;
     
+    
     background-color: rgba(51, 42, 45, 0.66);
 }
 .main-burger > div{
@@ -118,6 +119,7 @@ width: 50px;}
   /* End of chagne bar */
 #nav-main{
     display: block;
+    width: 176px;
     top: 84px;
     right: 0;
     position: absolute;
@@ -274,8 +276,8 @@ width: 50px;}
 .tile{
     width: 50%;
     background-size: cover;
-    background-position: center center;
-    box-sizing: border-box;
+    background-position: center;
+    
     
 }
 .detail-1{
