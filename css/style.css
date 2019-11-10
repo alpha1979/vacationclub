@@ -171,27 +171,35 @@ width: 50px;}
 .hero-section{
   position: relative;
  background-color: black;
-  height: 100vh;
+ 
   min-height: 25rem;
  margin: auto;
   width: 100%;
+  height: 100vh;
   overflow: hidden;
     
 }
 
 
-
+.t-vid-container{
+    left: 0;
+    width: 100vw;
+    position: absolute;
+   
+}
 
 .t-vid{
     position: absolute;
-    overflow: hidden;
+    
     top: 0;
     left:0;
     min-width: 100%;
     min-height:100%;
     width: 100vw;
-    height: auto;
-    z-index: 0;
+    overflow: auto;
+    /* height: auto; */
+    /* z-index: 0; */
+    background-size: cover;
     
 }
 
@@ -321,26 +329,29 @@ width: 50px;}
     background-color: #5b5456;
 }
 /* upto here  */
-/* @media (min-aspect-ratio: 16/9){
+/* @media (min-width: 1200px){
     .t-vid{
-        width: 100vw;
-        height: auto;
+        
+        background-size: cover;
         
     }
     
    
    
 } */
-@media screen and (max-width: 800px){
-    
+@media screen and (max-width: 750px){
+    /* .hero-section{
+        width: 100%;
+        height: 80vh;
+    } */
     .t-vid{
-        overflow: auto;
+        width: 90vh;
+        /* height: 100vh; */
+        background-size: cover;
+        /* overflow: hidden; */
         
     }
-    .trans-all-out-10{
-        width: 60vw;
-        height: auto;
-    }
+  
     .header_img{
         width: 100vw;
         height:40vh;
@@ -349,10 +360,21 @@ width: 50px;}
 }
 
 @media screen and (max-width: 500px){
+    /* .hero-section{
+        width: 100%;
+        height: 70vh;
+    } */
     .t-vid{
-        display: none;
+        width: 100vh;
+        height: 100vh;
+        background-size: cover;
+        
         
 
+    }
+    .trans-all-out-10{
+        width: 50vw;
+        height: auto;
     }
     /* .down-arrow{
         transform: translateY(-44%);
@@ -360,6 +382,7 @@ width: 50px;}
     
     
 }
+
 @media screen and (min-width:768px){
     span{position: absolute;
     background: rgba(175,169,169, 0.6);
