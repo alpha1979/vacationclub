@@ -14,6 +14,7 @@ html,body{
     
     color: white;
     overflow-x:hidden;
+    cursor: context-menu;
 }
 a {
     font-weight: normal;
@@ -22,6 +23,7 @@ a {
 }
 a:hover{
     text-decoration: none;
+    color: #fff;
 }
 
 #main-landing{
@@ -154,6 +156,10 @@ width: 50px;}
     text-transform: capitalize;
     text-decoration: none;
 }
+#nav-main ul li a:hover{
+    color: #948d8d;
+}
+
 /* .nav{
    
     width: 40px;
@@ -177,6 +183,8 @@ width: 50px;}
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  
+  
     
 }
 
@@ -185,6 +193,8 @@ width: 50px;}
     left: 0;
     width: 100vw;
     position: absolute;
+    
+    
    
 }
 
@@ -273,6 +283,9 @@ width: 50px;}
     outline: none;
     transform: translateX(-1%);
 }
+.down-arrow a:hover{
+    transform: translateX(-10%);
+}
 
 .tiles{
    
@@ -282,15 +295,17 @@ width: 50px;}
    
 }
 .tile{
-    width: 50%;
-    background-size: cover;
-    background-position: center;
+    width: 100vw;
+    height: auto;
+    
+    /* background-size: cover;
+    background-position: center; */
     
     
 }
-.detail-1{
+/* .detail-1{
     margin:3em;
-}
+} */
 .detail-1 h3 {
     font-size: 1.8em;
     margin: 0.3em 0;
@@ -299,10 +314,10 @@ width: 50px;}
     background-image: url(/assets/lakefront.jpg) no-repeat center;
   
 }
-.header_img{
+/* .header_img{
     width: 100%;
-    height: 50%;
-}
+    height: 50vh;
+} */
 .bg-dark-1{
     background-color:#5b5456;
 }
@@ -313,9 +328,15 @@ width: 50px;}
     color: black;
     text-align: center;
 }
-.btn-own{
+ #btn-own {
     border-radius: 0;
+    /* margin-left:110px; */
+   
     
+    
+}
+.icons{
+    cursor: pointer;
 }
 /* need to sort out later */
 #enquire{
@@ -329,16 +350,20 @@ width: 50px;}
     background-color: #5b5456;
 }
 /* upto here  */
-/* @media (min-width: 1200px){
-    .t-vid{
+@media (max-width: 900px){
+    /* .t-vid{
         
         background-size: cover;
         
-    }
+    } */
+    /* .tile{
+        width: 100%;
+        height: 40vh;
+    } */
     
    
    
-} */
+}
 @media screen and (max-width: 750px){
     /* .hero-section{
         width: 100%;
@@ -353,9 +378,10 @@ width: 50px;}
     }
   
     .header_img{
-        width: 100vw;
-        height:40vh;
+        width: 100%;
+        height:30vh;
     }
+    
     
 }
 
