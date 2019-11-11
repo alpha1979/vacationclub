@@ -15,7 +15,7 @@ html,body{
     
     color: white;
     overflow-x:hidden;
-    cursor: context-menu;
+    cursor: default;
 }
 a {
     font-weight: normal;
@@ -68,7 +68,12 @@ p{
     position: absolute;
     
     
-    background-color: rgba(51, 42, 45, 0.66);
+    background-color:#003451;
+}
+.nav-bgcolor{
+    background-color:#003451;
+    margin: 0 auto;
+    height: 84px;
 }
 .main-burger > div{
     
@@ -125,7 +130,7 @@ width: 50px;}
     top: 84px;
     right: 0;
     position: absolute;
-    background-color: rgba(51, 42, 45, 0.66);
+    background-color:#003451;
     padding: 15px 20px 0 20px;
     margin: 0 auto;
     z-index: 1200;
@@ -167,41 +172,34 @@ width: 50px;}
 /* video background section */
 .hero-section{
   position: relative;
- background-color: black;
+  background-color:#003451;
  
   min-height: 25rem;
- margin: auto;
+  margin: auto;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  
-  
-    
-}
+ }
 
 
 .t-vid-container{
     left: 0;
     width: 100vw;
     position: absolute;
-    
-    
-   
 }
 
 .t-vid{
-    position: absolute;
-    
+    position: relative;
     top: 0;
     left:0;
     min-width: 100%;
     min-height:100%;
     width: 100vw;
+    height: auto;
     overflow: auto;
     /* height: auto; */
     /* z-index: 0; */
     background-size: cover;
-    
 }
 
 
@@ -218,7 +216,7 @@ width: 50px;}
   }
   .heroverlay{
     
-    top: 20%;
+    top: 10%;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -240,8 +238,6 @@ width: 50px;}
     max-width: 627px;
     padding-left: 1rem;
     padding-right: 1rem;
-     
-     
     margin: auto;
     margin: 1.2em auto 3em;
     
@@ -260,21 +256,24 @@ width: 50px;}
     border: 1px solid #fff;
 }
 .down-arrow {
-    background: url(/assets/arrow.png) no-repeat center center;
-    background-size: 50px 20px;
-    height: 150px;
+    
+   
+    height: 60px;
     margin: 0.6em auto;
     z-index: 1000;
-    opacity: 0.8;
-  
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
+    /* left: 50%; */
+    display: block;
+    position: relative;
+    text-align: center;
+    bottom: 25%; 
+    /* width:0%; */
+    /* height: 50%; */
     outline: none;
-    transform: translateX(-1%);
-}
-.down-arrow a:hover{
-    transform: translateX(-10%);
+    /* transform: translateX(-1%);*/
+} 
+.down-arrow:hover{
+    transform: translateY(10%);
+    opacity: 0.7;  
 }
 
 .tiles{
@@ -327,7 +326,7 @@ width: 50px;}
 }
 
 .bg-dark-1{
-    background-color:#5b5456;
+    background-color:#003451 ;
 }
 .card{
     margin-bottom: 20px;
